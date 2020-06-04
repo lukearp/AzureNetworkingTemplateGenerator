@@ -1,0 +1,107 @@
+{
+     "definitions": {},
+     "$schema": "http://json-schema.org/draft-07/schema#",
+     "$id": "http://example.com/root.json",
+     "type": "array",
+     "title": "The Root Schema",
+     "items": {
+       "$id": "#/items",
+       "type": "object",
+      "title": "The Items Schema",
+      "required": [
+        "isHub",
+        "cider",
+        "subnetsCider",
+        "typeName",
+        "dr",
+        "drCider",
+        "drSubnetsCider"
+      ],
+     "properties": {
+       "isHub": {
+         "$id": "#/items/properties/isHub",
+         "type": "boolean",
+         "title": "The Ishub Schema",
+         "default": false,
+         "examples": [
+           false
+         ]
+       },
+       "cider": {
+         "$id": "#/items/properties/cider",
+         "type": "integer",
+         "title": "The Cider Schema",
+         "default": 0,
+         "examples": [
+           20
+         ]
+       },
+       "subnetsCider": {
+         "$id": "#/items/properties/subnetsCider",
+         "type": "array",
+         "title": "The Subnetscider Schema",
+         "items": {
+           "$id": "#/items/properties/subnetsCider/items",
+           "type": "string",
+           "title": "The Items Schema",
+           "default": "",
+           "examples": [
+             "DMZ/24",
+             "Web/22",
+             "App/22",
+             "DB/23"
+           ],
+           "pattern": "^(.*)$"
+         }
+       },
+       "typeName": {
+         "$id": "#/items/properties/typeName",
+         "type": "string",
+         "title": "The Typename Schema",
+         "default": "",
+         "examples": [
+           "Prod"
+         ],
+         "pattern": "^(.*)$"
+       },
+       "dr": {
+         "$id": "#/items/properties/dr",
+         "type": "boolean",
+         "title": "The Dr Schema",
+         "default": false,
+         "examples": [
+           true
+         ]
+       },
+       "drCider": {
+         "$id": "#/items/properties/drCider",
+         "type": "integer",
+         "title": "The Drcider Schema",
+         "default": 0,
+         "examples": [
+           24
+         ]
+       },
+       "drSubnetsCider": {
+         "$id": "#/items/properties/drSubnetsCider",
+         "type": "array",
+         "title": "The Drsubnetscider Schema",
+         "items": {
+           "$id": "#/items/properties/drSubnetsCider/items",
+           "type": "string",
+           "title": "The Items Schema",
+           "default": "",
+           "examples": [
+             "DMZ/28",
+             "Web/27",
+             "App/27",
+             "DB/27"
+           ],
+           "pattern": "^(.*)$"
+        }
+       }
+     }
+  }
+}
+
+
